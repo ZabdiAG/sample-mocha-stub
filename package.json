@@ -1,0 +1,23 @@
+{
+  "name": "sample-mocha-stub",
+  "version": "1.0.0",
+  "description": "Simple sample project using mochajs and stubs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha mocha ./test/* --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZabdiAG/sample-mocha-stub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZabdiAG/sample-mocha-stub/issues"
+  },
+  "homepage": "https://github.com/ZabdiAG/sample-mocha-stub#readme",
+  "dependencies": {
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  }
+}
