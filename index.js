@@ -1,15 +1,23 @@
+const Promise = require('bluebird')
+
 class Stubbing {
   constructor (params = {}) {
     this.affected = 'no'
   }
 
-  run () {
-    this._mochThisOne()
-    return this.affected
+  run (cb) {
+    return Promise.try(() => {
+      return this._mochThisOne()
+        .then(cb)
+    })
   }
 
   _mochThisOne () {
-    this.affected = 'yes it is'
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.affected = 'yes')
+      }, 3000)
+    })
   }
 }
 module.exports = Stubbing
